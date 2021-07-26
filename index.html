@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<HTML lang="zh-TW">
+    <HEAD>
+        <meta charset="utf-8">
+        <TITLE>Yourtwo</TITLE>
+        <style>
+            body{margin: 0;padding: 0;width: 100%; text-align:center ;}
+            #all{
+                width: 100%;
+                min-width: 1300px;
+                margin:0 auto;
+            }
+            #header{
+                height: 80px;
+                background-color: black;
+                font-size: 50px;
+                color: white;
+                text-align:center;
+            }
+            #header1{
+                height: 20px;
+                background-color: black;
+                margin: 0px 30% 0px 30%;
+                color: aliceblue;
+                width: 40%;
+                top: 80px;
+            }
+            #wrapper{
+                float:left;
+                width:100%;
+            }
+            #right{
+                background-color: black;
+                float:right;
+                width:30%;
+                height:20px;
+                font-size: 20px;
+                color: white;
+                text-align:left;
+                margin-left:-30%;
+            }
+            #left{
+                background-color: black;
+                float:left;
+                width:30%;
+                height:20px;
+                font-size: 20px;
+                color: white;
+                text-align:right;
+                top: 80px;
+            }
+            #main{
+                background-color: black;
+                height:900px;
+                position: absolute;
+                width:100%;
+                top: 100px;
+            }
+            
+            
+            #div1 {
+                text-align:center;
+                margin:40px 0 0 13% ;
+
+            }
+            /*#div2{
+                text-align:center;
+                margin: 40px 13.5%  0 0    ;
+                
+            
+            }*/
+            
+            
+            ul {
+                margin:0 ;
+                padding: 0;
+                list-style-type: none;
+            }
+            .menu {
+                font-family: '標楷體';
+                font-size: 40px;
+            }
+            .menu > li { /*子選擇器，只有第一層*/
+                float: left;
+            }
+            .menu li {
+                position: relative;
+                padding: 0px;
+                border: lightblue 1px dashed;
+                min-width: 250px;
+                }
+            .menu ul {
+                position: absolute;
+                z-index: 10;
+                top: 100%;
+            }
+            .menu ul li > ul{	
+                z-index: 20;
+                top: 5%;
+                left: 100%;
+            }
+            .menu ul {
+                position: absolute;
+                z-index: 10;
+                top: 100%;
+                display:none; /*預設ul不顯示*/
+            }
+
+            .menu a2 {
+                display: block;
+                padding: 40px;
+                text-decoration: none;
+                color: white;   
+            }   
+            .menu a2:hover {
+                color: crimson;   
+            }
+            .menu li:hover > ul {
+                display: block; /*移動到li，li下一層的ul才顯示*/
+            }
+            .menu a {
+                display: block;
+                padding: 5px;
+                text-decoration: none;
+                color: white;   
+            }   
+            .menu a:hover {
+                color: crimson;   
+            }
+ 
+            .menu1 {
+                font-family: '標楷體';
+                font-size: 40px;
+            }
+            .menu1 > li { /*子選擇器，只有第一層*/
+                float: right;
+            }
+            .menu1 li {
+                position: relative;
+                padding: 0px;
+                border: lightblue 1px dashed;
+                min-width: 250px;
+                }
+            .menu1 ul {
+                position: absolute;
+                z-index: 10;
+                top: 100%;
+            }
+            .menu1 ul li > ul{	
+                z-index: 20;
+                top: 5%;
+                left:100%;
+            }
+            .menu1 ul {
+                position: absolute;
+                z-index: 10;
+                top: 100%;
+                display:none; /*預設ul不顯示*/
+            }
+            .menu1 a2 {
+                display: block;
+                padding: 40px;
+                text-decoration: none;
+                color: white;   
+            }   
+            .menu1 a2:hover {
+                color: crimson;   
+            }
+            .menu1 li:hover > ul {
+                display: block; /*移動到li，li下一層的ul才顯示*/
+            }
+            .menu1 a {
+                display: block;
+                padding: 5px;
+                text-decoration: none;
+                color: white;   
+            }   
+            .menu1 a:hover {
+                color: crimson;   
+            }
+            
+            #a{cursor: url(http://cur.cursors-4u.net/cursors/cur-8/cur727.ani), url(http://cur.cursors-4u.net/cursors/cur-8/cur727.png), auto !important;}
+            #b{cursor: url(http://cur.cursors-4u.net/smilies/smi-3/smi267.ani), url(http://cur.cursors-4u.net/smilies/smi-3/smi267.png), auto !important;}
+            #c{cursor: url(http://cur.cursors-4u.net/games/gam-14/gam1340.cur), auto !important;}
+            #d{cursor: url(http://cur.cursors-4u.net/others/oth-8/oth755.cur), auto !important;}
+            #e{cursor: url(http://cur.cursors-4u.net/cursors/cur-1/cur1.ani), url(http://cur.cursors-4u.net/cursors/cur-1/cur1.png), auto !important;}
+            #f{cursor: url(http://ani.cursors-4u.net/cursors/cur-11/cur1073.ani), url(http://ani.cursors-4u.net/cursors/cur-11/cur1073.png), auto !important;}
+            #g{cursor: url(http://cur.cursors-4u.net/others/oth-6/oth543.ani), url(http://cur.cursors-4u.net/others/oth-6/oth543.png), auto !important;}
+            #h{cursor: url(http://cur.cursors-4u.net/anime/ani-11/ani1037.ani), url(http://cur.cursors-4u.net/anime/ani-11/ani1037.png), auto !important;}
+            #i{cursor: url(http://cur.cursors-4u.net/games/gam-2/gam188.cur), auto !important;}
+            #j{cursor: url(http://cur.cursors-4u.net/anime/ani-12/ani1136.ani), url(http://cur.cursors-4u.net/anime/ani-12/ani1136.gif), auto !important;}
+            #k{cursor: url(http://cur.cursors-4u.net/anime/ani-1/ani50.ani), url(http://cur.cursors-4u.net/anime/ani-1/ani50.png), auto !important;}
+            #l{cursor: url(http://cur.cursors-4u.net/anime/ani-12/oth1127.ani), url(http://cur.cursors-4u.net/anime/ani-12/oth1127.png), auto !important;}
+            #m{cursor: url(http://cur.cursors-4u.net/cursors/cur-3/cur205.ani), url(http://cur.cursors-4u.net/cursors/cur-3/cur205.png), auto !important;}
+            #n{cursor: url(http://cur.cursors-4u.net/people/peo-1/peo12.ani), url(http://cur.cursors-4u.net/people/peo-1/peo12.png), auto !important;}
+            #o{cursor: url(http://cur.cursors-4u.net/anime/ani-10/ani937.ani), url(http://cur.cursors-4u.net/anime/ani-10/ani937.png), auto !important;}
+            #p{cursor: url(http://cur.cursors-4u.net/user/use-1/use64.ani), url(http://cur.cursors-4u.net/user/use-1/use64.png), auto !important;}
+            
+            #surprise{
+                top:550px;
+                margin-left: 87px;
+                
+                font-size: 1px; 
+                
+            }
+            #a123 a{
+                text-decoration: none;
+                color:black;
+            }
+            #a123 a:hover{
+                 color:black;
+            }
+            @media all and (min-width: 480px) and (max-width: 800px) {
+                #container {width: auto; max-width: 800px;}
+                #main {width: 70%; float: left;}
+                #sidebar {width: 30%; float: left; margin-bottom: 10px;}
+                #pub {width: 30%; margin-left: 70%; float: none;} } @media all and (min-width: 400px) and (max-width: 480px) {
+                #container {width: auto; max-width: 480px;}
+                #main, #sidebar, #pub {width: 100%; float: none;}
+                h1 {position: absolute; top: 0; height: 30px; width: 100%;}
+                #sidebar {position: absolute; top: 40px; height: 40px;}
+                #sidebar p {display: none;}
+                #sidebar ul {padding: 0; margin-top: 10px; overflow: hidden;}
+                #sidebar ul li {display: inline; font-size: 15px;}
+                #main {position: absolute; top: 80px;}
+                #pub, #footer {display: none;}
+            }
+        </style>
+    </HEAD>
+    <BODY>
+        <div id="all">
+           <div id=a>
+            <div id="header" >Yourtwo</div>
+            <div id="wrapper">
+                <div id="left">《</div>
+                <div id="right">》</div>
+                <div id="header1">
+                    <marquee align="midden" direction="right" scrollamount="14" behavior="scroll">
+                        ~~~~~~~~~~~~~~~~~~~12月31日也很棒 是吧 老師^_^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        12月30日是很棒的日子~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        ✿✿✿我們做的很棒吧吧吧~評高一點嘛✿✿✿~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        用IE開很厲害哦
+                        (⊃｡•́‿•̀｡)⊃━━━━☆｡･:*:･ﾟ'★,｡･:*:･ﾟ'☆霹靂卡 霹靂拉拉　波波力那 貝貝魯多~~~~~~~~~
+                        既然來了歌名想說願妳
+                    </marquee>
+                </div>
+            </div>
+            <div id="main">
+                <div id="div1">
+                <ul class="menu">
+                    <li><a2 href="#">公益</a2>
+                        <ul>
+                            <li><a href="#"><div id="a">愛心大愛</div></a>
+                                <ul>
+                                    <li><a href="https://www.children.org.tw/join/celebrity_detail/CBR000029"target="_blank"><div id="b">侯佩岑</div></a></li>
+                                    <li><a href="https://www.children.org.tw/join/celebrity_detail/CBR000023"target="_blank"><div id="b">郭采潔</div></a></li>
+                                    <li><a href="https://www.children.org.tw/join/celebrity_detail/1556"target="_blank"><div id="c">陳建州</div></a></li>
+                                    <li><a href="https://www.children.org.tw/join/celebrity_detail/1560"target="_blank"><div id="c">張書豪</div></a></li>
+                                    <li><a href="https://www.children.org.tw/join/celebrity_detail/1558"target="_blank"><div id="c">夏于喬</div></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><div id="a">幫助偏鄉</div></a>
+                                <ul>
+                                    <li><a href="https://www.thenewslens.com/feature/mitsubishi-motors-young-2017/86367"target="_blank"><div id="d">黃正發校長</div></a></li>
+                                    <li><a href="https://udn.com/news/story/6845/3983470"target="_blank"><div id="d">劉安婷</div></a></li>
+                                    <li><a href="https://www.storm.mg/lifestyle/340959"target="_blank"><div id="d">陳俊朗</div></a></li>
+                                    <li><a href="https://udn.com/news/story/7266/3205264"target="_blank"><div id="d">許素娟</div></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><div id="a">國際援助</div></a>
+                                <ul>
+                                    <li><a href="http://www.taiwanroot.org/"target="_blank"><div id="e">台灣路竹會</div></a></li>
+                                    <li><a href="https://www.taiwaniha.org.tw/"target="_blank"><div id="e">TaiwanIHA</div></a></li>
+                                    <li><a href="http://www.action2world.org/"target="_blank"><div id="e">iACT</div></a></li>
+                                    <li><a href="https://m.worldvision.org.tw/"target="_blank"><div id="e">世界展望會</div></a></li>
+                                </ul>
+                            </li>
+                        </ul>   
+                    </li>
+                    <li><a2 href="#">爭議</a2>
+                        <ul>
+                            <li><a href="#"><div id="a">奇美部落</div></a>
+                                <ul>
+                                    <li><a href="奇美部落-內容簡介.html"target="_blank"><div id="f">內容簡介</div></a></li>
+                                    <li><a href="奇美部落-談判現場.html"target="_blank"><div id="f">談判現場</div></a></li>
+                                    <li><a href="奇美部落-後續發展.html"target="_blank"><div id="f">後續發展</div></a></li>
+                                    <li><a href="奇美部落-資料來源.html"target="_blank"><div id="f">資料來源</div></a></li>
+                                    <li><a href="奇美部落-心得感想.html"target="_blank"><div id="f">心得感想</div></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><div id="a">知本濕地</div></a>
+                                <ul>
+                                    <li><a href="知本濕地-內容簡介.html"target="_blank"><div id="g">內容簡介</div></a></li>
+                                    <li><a href="知本濕地-談判現場.html"target="_blank"><div id="g">談判現場</div></a></li>
+                                    <li><a href="知本濕地-後續發展.html"target="_blank"><div id="g">後續發展</div></a></li>
+                                    <li><a href="知本濕地-資料來源.html"target="_blank"><div id="g">資料來源</div></a></li>
+                                    <li><a href="知本濕地-心得感想.html"target="_blank"><div id="g">心得感想</div></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><div id="a">都蘭部落</div></a>
+                                <ul>
+                                    <li><a href="都蘭部落-內容簡介.html"target="_blank"><div id="h">內容簡介</div></a></li>
+                                    <li><a href="都蘭部落-談判現場.html"target="_blank"><div id="h">談判現場</div></a></li>
+                                    <li><a href="都蘭部落-後續發展.html"target="_blank"><div id="h">後續發展</div></a></li>
+                                    <li><a href="都蘭部落-資料來源.html"target="_blank"><div id="h">資料來源</div></a></li>
+                                    <li><a href="都蘭部落-心得感想.html"target="_blank"><div id="h">心得感想</div></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                  
+                    <li><div><div id="j"><a2 href="#">電腦</a2></div></div>
+                        <ul>
+                            <li><a href="#"><div id="j">主機板</div></a>
+                                <ul>
+                                    <li><a href="https://www.asus.com/tw/Motherboards/"target="_blank"><div id="k">華碩</div></a>
+                                        <ul>
+                                            <li><a href="https://www.asus.com/tw/Motherboards/ASUS-Prime-Products/"target="_blank"><div id="k">Prime</div></a>
+                                            <li><a href="https://www.asus.com/tw/Motherboards/TUF-The-Ultimate-Force-Products/"target="_blank"><div id="k">TUF</div></a>
+                                            <li><a href="https://www.asus.com/tw/Motherboards/TUF-Gaming-Products/"target="_blank"><div id="k">TUF GAMING</div></a>
+                                            <li><a href="https://www.asus.com/tw/Motherboards/TUF-The-Ultimate-Force-Products/"target="_blank"><div id="k">ROG</div></a>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://tw.msi.com/Motherboards"target="_blank"><div id="m">微星</div></a>
+                                        <ul>
+                                            <li><a href="https://tw.msi.com/Motherboard/B450M-MORTAR-MAX"target="_blank"target="_blank"><div id="m">B450</div></a>
+                                            <li><a href="https://tw.msi.com/Motherboard/X370-GAMING-PLUS"target="_blank"><div id="m">X370</div></a >
+                                            <li><a href="https://tw.msi.com/Motherboard/X470-GAMING-PLUS"target="_blank"><div id="m">X470</div></a>
+                                            <li><a href="https://tw.msi.com/Motherboard/MPG-X570-GAMING-PLUS"target="_blank"><div id="m">X570</div></a>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://www.gigabyte.com/tw/Motherboard"target="_blank"><div id="m">技嘉</div></a>
+                                        <ul>
+                                            <li><a href="https://www.gigabyte.com/tw/Motherboard/AORUS-Gaming"target="_blank"><div id="m">AROUS</div></a>
+                                            <li><a href="https://www.gigabyte.com/tw/Motherboard/GIGABYTE-Gaming"target="_blank"><div id="m">GAMING</div></a >
+                                            <li><a href="https://www.gigabyte.com/tw/Motherboard/Ultra-Durable%E2%84%A2"target="_blank"><div id="m">UD</div></a>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><div><div id="j">顯示卡</div></div></a>
+                                <ul>
+                                    <li><a href="https://www.asus.com/tw/Graphics-Cards/"target="_blank"><div id="l">華碩</div></a>
+                                        <ul>
+                                            <li><a href="https://www.asus.com/tw/Graphics-Cards/ROG-Republic-of-Gamers-Products/"target="_blank"><div id="l">ROG</div></a>
+                                            <li><a href="#https://www.asus.com/tw/Graphics-Cards/Turbo-Series-Products/"target="_blank"><div id="l">Turbo</div></a>
+                                            <li><a href="https://www.asus.com/tw/Graphics-Cards/Dual-Series-Products/"target="_blank"><div id="l">Dual</div></a>
+                                            <li><a href="https://www.asus.com/tw/Graphics-Cards/TUF-Gaming-Series-Products/"target="_blank"><div id="l">TUF</div></a>
+                                            <li><a href="https://www.asus.com/tw/Graphics-Cards/Phoenix-Series-Products/"target="_blank"><div id="l">Phoenix</div></a>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://tw.msi.com/Graphics-Cards"target="_blank"><div id="o">微星</div></a>
+                                        <ul>
+                                            <li><a href="https://tw.msi.com/Graphics-card/Radeon-RX-5700-XT-8G"target="_blank"><div id="o">RX 5700XT</div></a>
+                                            <li><a href="https://tw.msi.com/Graphics-card/Radeon-RX-5700-8G"target="_blank"><div id="o">RX 5700</div></a>
+                                            <li><a href="https://tw.msi.com/Graphics-card/Radeon-RX-5500-XT-GAMING-8G"target="_blank"><div id="o">RX 5500XT</div></a>
+                                            <li><a href="https://tw.msi.com/Graphics-card/Radeon-RX-Vega-64-8G"target="_blank"><div id="o">RX Vega64</div></a>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://www.gigabyte.com/tw/Graphics-Card" target="_blank"><div id="n">技嘉</div></a>
+                                        <ul>
+                                            <li><a href="https://www.gigabyte.com/tw/Graphics-Card/GV-R57XTAORUS-8GD#kf"target="_blank"><div id="n">RX 5700XT</div></a>
+                                            <li><a href="https://www.gigabyte.com/tw/Graphics-Card/GV-R57-8GD-B#kf"target="_blank"><div id="n">RX 5700</div></a>
+                                            <li><a href="https://www.gigabyte.com/tw/Graphics-Card/GV-R55XTGAMING-OC-8GD#kf"target="_blank"><div id="n">RX 5500XT</div></a>
+                                            <li><a href="https://www.gigabyte.com/tw/Graphics-Card/GV-RXVEGA64-8GD-B#kf"target="_blank"><div id="n">RX Vega64</div></a>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="https://www.amd.com/zh-hant/products/processors-desktop"target="_blank"><div><div id="j">處理器</div></div></a>
+                                <ul>
+                                    <li><a href="https://www.amd.com/zh-hant/products/cpu/amd-ryzen-5-3500x"target="_blank"><div id="p">R5 3500X</div></a></li>
+                                    <li><a href="https://www.amd.com/zh-hant/products/cpu/amd-ryzen-5-3600"target="_blank"><div id="p">R5 3600</div></a></li>
+                                    <li><a href="https://www.amd.com/zh-hant/products/cpu/amd-ryzen-5-3600x"target="_blank"><div id="p">R5 3600X</div></a></li>
+                                    <li><a href="https://www.amd.com/zh-hant/products/cpu/amd-ryzen-7-3700x"target="_blank"><div id="p">R7 3700X</div></a></li>
+                                    <li><a href="https://www.amd.com/zh-hant/products/cpu/amd-ryzen-9-3950x"target="_blank"><div id="p">R9 3950X</div></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><div><div id="i"><a2 href="#">筆電</a2></div></div>
+                        <ul>
+                            <li><a href="https://www.acer.com/ac/zh/TW/content/group/laptops" target="_blank"><div><div id="i">宏碁</div></div></a>
+                                <ul>
+                                    <li><a href="https://www.acer.com/ac/zh/TW/content/series/swift3" target="_blank"><div><div id="i">Swift 3</div></div></a></li>
+                                    <li><a href="https://www.acer.com/ac/zh/TW/content/series/swift5" target="_blank"><div><div id="i">Swift 5</div></div></a></li>
+                                    <li><a href="https://www.acer.com/ac/zh/TW/content/series/aspire5" target="_blank"><div><div id="i">Aspire 5</div></div></a></li>
+                                    <li><a href="https://www.acer.com/ac/zh/TW/content/series/aspire7" target="_blank"><div><div id="i">Aspire 7</div></div></a></li>
+                                    <li><a href="https://www.acer.com/ac/zh/TW/content/series/nitro5" target="_blank"><div><div id="i">NITRO 5</div></div></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://www.asus.com/tw/Laptops/"target="_blank"><div><div id="i">華碩</div></div></a>
+                                <ul>
+                                    <li><a href="https://www.asus.com/tw/Laptops/ZenBook-Series-Home/" target="_blank"><div><div id="i">ZenBook</div></div></a></li>
+                                    <li><a href="https://www.asus.com/tw/Laptops/VivoBook-Series-Home/"target="_blank"><div><div id="i">VivoBook</div></div></a></li>
+                                    <li><a href="https://www.asus.com/tw/Laptops/ASUS-Laptop-Series-Products/"target="_blank"><div><div id="i">Laptop</div></div></a></li>
+                                    <li><a href="https://www.asus.com/tw/Laptops/Gaming-Series-Products/"target="_blank"><div><div id="i">ROG Gaming</div></div></a></li>
+                                    <li><a href="https://www.asus.com/tw/Laptops/ASUS-TUF-Gaming-Series-Products/"target="_blank"><div><div id="i">TUF Gaming</div></div></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://tw.msi.com/Laptops"target="_blank"><div><div id="i">微星</div></div></a>
+                                <ul>
+                                    <li><a href="https://tw.msi.com/Laptop/Products#?tag=GP-%E7%B3%BB%E5%88%97"target="_blank"><div><div id="i">GP</div></div></a></li>
+                                    <li><a href="https://tw.msi.com/Laptop/Products#?tag=GE-%E7%B3%BB%E5%88%97"target="_blank"><div><div id="i">GE</div></div></a></li>
+                                    <li><a href="https://tw.msi.com/Laptop/Products#?tag=GS-%E7%B3%BB%E5%88%97"target="_blank"><div><div id="i">GS</div></div></a></li>
+                                    <li><a href="https://tw.msi.com/Laptop/Products#?tag=GT-%E7%B3%BB%E5%88%97"target="_blank"><div><div id="i">GT</div></div></a></li>
+                                    <li><a href="https://tw.msi.com/Laptop/Products#?tag=Alpha-%E7%B3%BB%E5%88%97"target="_blank"><div><div id="i">Alpha</div></div></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li> 
+                      </ul>
+                </div>
+                <div id="a123">
+                    <div id="surprise"><a href="%E5%BD%A9%E8%9B%8B.html"><div id="a">BUG</div></a></div>
+                </div>
+            </div>
+            </div>
+        
+        </div>
+    </BODY>
+</HTML>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="zh-TW">    
+    <head>
+        <meta charset="utf8">
+        <title>奇美部落-談判現場</title>
+        <style>
+           body{margin:-30px 0 0;padding: 0;width: 100%; height: }
+            #all{
+                width: 100%;
+                min-width: 1300px;
+                margin:0 auto;
+            }
+            #header1{
+                background-color: white;
+                height: 110px;
+                position:fixed;
+                width: 100%;
+            }
+            #header2{/*跑馬燈*/
+                background-color:white;
+                height: 20px;
+                margin: 110px 16% 0px 17%;
+                position:fixed;
+            }
+            #header{
+                background-color:black;
+                height:30px;
+                position:fixed;
+                width: 100%;
+                margin: 130px 0;
+            }
+            #wrapper0{
+                float:left;
+                width:100%;
+                position:fixed;
+            }
+            #right0{/*跑馬燈*/
+                background-color: white;
+                float:right;
+                width:16%;
+                margin-left:-16%;
+                height:20px;
+                font-size: 20px;
+                color: white;
+                text-align:left;
+                margin: 110px auto auto;
+            }
+            #left0{/*跑馬燈*/
+                background-color: white;
+                float:left;
+                width:17%;	
+                height:20px;
+                font-size: 20px;
+                color: white;
+                text-align:right;
+                margin: 110px 0 0 0;
+            }
+            #wrapper{
+                float:left;
+                width:100%;
+                margin: 160px auto auto;
+            }
+            #main{
+                margin:0px 17% 0 16%;
+                background-color:whitesmoke;
+                height:1500px;
+                width: 68%;
+            }
+            #right{
+                float:right;
+                width:16%;
+                margin-left:-16%;
+                background-color:white;
+                height:1500px;
+                margin: 0 ;
+            }
+            #left{
+                float:left;
+                width:17%;
+                margin:0 0 0 0;		
+                background-color:white;
+                height:1500px;
+            }
+            
+            
+            #head1{
+                font:italic bold 40px/50px "Yourtwo","標楷體";
+                color: white;
+                text-shadow: 2px 2px 10px #0000C6;
+                letter-spacing: 3px;
+                margin: 45px 17% 20px 16% ;
+            }
+            
+            .site_search {
+                width: 65%;
+                margin:1px 80px 0px ;
+            }
+           .search_input {
+                position: absolute;
+                right: 16%;
+                height: 28px;   
+                width: 180px;
+                border: 1px solid #d9d9d9;
+                padding: 4px 0px 4px 15px;
+                background: #f0ede9;
+                color: #8B8B8B;
+                font-size: 15px;
+                vertical-align:middle;
+            }
+            
+            
+            #rmenu {
+                position: fixed;
+                margin:  40px auto auto;
+                z-index: 5;
+                font-weight: bold;
+                font-size: 15px;
+                text-align:left;
+                color: #3d3d3f;
+                background-color: whitesmoke;
+                padding: 0 0.5em 0.5em 0.5em;
+            }
+            #top{bottom:20px;}
+            
+            #a1 a:link{
+                color: #0000FF;
+            }
+            #a1 a:visited{
+                color: blue;
+            }
+            #a1 a:hover{
+                color: crimson;
+            }
+            #a1 a:active{
+                background-color:chartreuse;
+            }
+            a:link{
+                color:white;
+            }
+            a:visited{
+                color:white;
+            }
+            a:hover{
+                color: crimson;
+            }
+            a:active{
+                background-color:black;
+            }
+            #gohome{
+                font-family: '標楷體';
+                font-size: 20px;
+                position:absolute;
+                left:17%;
+                color: white;
+                margin: 3px 0px 0px 0%;
+            }
+    
+            div1{
+                position:absolute;
+                left:28%;
+                margin: 3px 0px 0px 0px;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;  
+            }
+            .menu {
+                font-family: '標楷體';
+                font-size: 20px;
+            }
+            .menu > li { /*子選擇器，只有第一層*/
+                float: left;
+            }
+            .menu li {
+                position: relative;
+                padding: 0px;
+                min-width: 120px;
+  
+            }
+            .menu ul {
+                position: absolute;
+                z-index: 10;
+                top: 100%;
+                position: absolute;
+                z-index: 10;
+                top: 100%;
+                display:none; /*預設ul不顯示*/
+            }
+            .menu ul li > ul{	
+                z-index: 20;
+                top: 0%;
+                left: 80%;
+            }
+            .menu a2 {
+                display: block;
+                padding: 0px;
+                text-decoration: none;
+                color: white;   
+            }   
+            .menu a2:hover {
+                color: crimson;   
+            }
+            .menu li:hover > ul {
+                display: block; /*移動到li，li下一層的ul才顯示*/
+            }
+            .menu a {
+                display: block;
+                padding: 5px;
+                text-decoration: none;
+                color: white;
+                background-color: black;
+                background-size: cover;
+                
+            }   
+            .menu a:hover {
+                color: crimson;   
+            }
+            
+            #a{cursor: url(http://cur.cursors-4u.net/cursors/cur-8/cur727.ani), url(http://cur.cursors-4u.net/cursors/cur-8/cur727.png), auto !important;}
+            #b{cursor: url(http://cur.cursors-4u.net/smilies/smi-3/smi267.ani), url(http://cur.cursors-4u.net/smilies/smi-3/smi267.png), auto !important;}
+            #c{cursor: url(http://cur.cursors-4u.net/games/gam-14/gam1340.cur), auto !important;}
+            #d{cursor: url(http://cur.cursors-4u.net/others/oth-8/oth755.cur), auto !important;}
+            #e{cursor: url(http://cur.cursors-4u.net/cursors/cur-1/cur1.ani), url(http://cur.cursors-4u.net/cursors/cur-1/cur1.png), auto !important;}
+            #f{cursor: url(http://ani.cursors-4u.net/cursors/cur-11/cur1073.ani), url(http://ani.cursors-4u.net/cursors/cur-11/cur1073.png), auto !important;}
+            #g{cursor: url(http://cur.cursors-4u.net/others/oth-6/oth543.ani), url(http://cur.cursors-4u.net/others/oth-6/oth543.png), auto !important;}
+            #h{cursor: url(http://cur.cursors-4u.net/anime/ani-11/ani1037.ani), url(http://cur.cursors-4u.net/anime/ani-11/ani1037.png), auto !important;}
+            #i{cursor: url(http://cur.cursors-4u.net/games/gam-2/gam188.cur), auto !important;}
+            #j{cursor: url(http://cur.cursors-4u.net/anime/ani-12/ani1136.ani), url(http://cur.cursors-4u.net/anime/ani-12/ani1136.gif), auto !important;}
+            #k{cursor: url(http://cur.cursors-4u.net/anime/ani-1/ani50.ani), url(http://cur.cursors-4u.net/anime/ani-1/ani50.png), auto !important;}
+            #l{cursor: url(http://cur.cursors-4u.net/anime/ani-12/oth1127.ani), url(http://cur.cursors-4u.net/anime/ani-12/oth1127.png), auto !important;}
+            #m{cursor: url(http://cur.cursors-4u.net/cursors/cur-3/cur205.ani), url(http://cur.cursors-4u.net/cursors/cur-3/cur205.png), auto !important;}
+            #n{cursor: url(http://cur.cursors-4u.net/people/peo-1/peo12.ani), url(http://cur.cursors-4u.net/people/peo-1/peo12.png), auto !important;}
+            #o{cursor: url(http://cur.cursors-4u.net/anime/ani-10/ani937.ani), url(http://cur.cursors-4u.net/anime/ani-10/ani937.png), auto !important;}
+            #p{cursor: url(http://cur.cursors-4u.net/user/use-1/use64.ani), url(http://cur.cursors-4u.net/user/use-1/use64.png), auto !important;}
+            
+            
+            
+            * {box-sizing:border-box;}
+            ul {list-style-type: none;}
+            body {font-family: Verdana,sans-serif;}
+
+            .month {
+                padding: 35px 0px 35px 0px;
+                width: 100%;
+                background: #1abc9c;
+            }
+            .month ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            .month ul li {
+                color: white;
+                font-size: 20px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                text-align: center;
+            }
+
+            .month .prev {
+                float: left;
+                padding-top: 10px;
+            }
+
+            .month .next {
+                float: right;
+                padding-top: 10px;
+            }
+
+            .weekdays {
+                margin: 0;
+                background-color: #ddd; 
+            }
+
+            .weekdays li {
+                display: inline-block;
+                width:100%;
+                color: #666;
+                text-align: center;
+                height: 4px;
+            }
+
+            .days {
+                padding: 10px 0;
+                background: #eee;
+                margin: 0;
+            }
+
+            .days li {
+                list-style-type: none;
+                display: inline-block;
+                width:90%;
+                margin: 10px;
+                text-align: center;
+                margin-bottom: 5px;
+                font-size:12px;
+                color: #777;
+            }
+
+            .days li .active {
+                padding: 5px;
+                background: #1abc9c;
+                color: white !important
+            }
+            #wordleft{
+                 
+                display: inline-block;
+                width: 100%;
+                text-align: left;
+                margin-bottom: 5px;
+                font-size:12px;
+                color: #777;
+                margin: 10px;
+            }
+            
+            #wordfirst{
+                font: bold 40px/50px "Yourtwo","標楷體";
+                                margin: 0px 0px 0px 90px ;
+            }
+            #wordfirst1{
+                font: bold 40px/50px "Yourtwo","標楷體";
+                margin: 0px 100px 30px 320px ;
+                
+            }
+            
+            #word1{
+                font: bold 22px/50px "1","標楷體";
+                margin: 0px 90px 30px 90px
+            }
+            #music{
+                position: fixed;
+            }
+            @media all and (min-width: 480px) and (max-width: 800px) {
+                #container {width: auto; max-width: 800px;}
+                #main {width: 70%; float: left;}
+                #sidebar {width: 30%; float: left; margin-bottom: 10px;}
+                #pub {width: 30%; margin-left: 70%; float: none;} } @media all and (min-width: 400px) and (max-width: 480px) {
+                #container {width: auto; max-width: 480px;}
+                #main, #sidebar, #pub {width: 100%; float: none;}
+                h1 {position: absolute; top: 0; height: 30px; width: 100%;}
+                #sidebar {position: absolute; top: 40px; height: 40px;}
+                #sidebar p {display: none;}
+                #sidebar ul {padding: 0; margin-top: 10px; overflow: hidden;}
+                #sidebar ul li {display: inline; font-size: 15px;}
+                #main {position: absolute; top: 80px;}
+                #pub, #footer {display: none;}
+            }
+               #a5 a:link{
+                color: white;
+            }
+            #a5 a:visited{
+                color: white;
+            }
+            #a5 a:hover{
+                color: white;
+            }
+            #a5 a:active{
+                background-color:white;
+            }
+            #a5{
+                 position:absolute;
+                left:85%;
+                top:3px;
+            }
+        </style>
+        <script>
+            (function(document) {
+                'use strict';
+                // 建立 LightTableFilter
+                var LightTableFilter = (function(Arr) {
+                var _input;
+                // 資料輸入事件處理函數
+            function _onInputEvent(e) {
+              _input = e.target;
+              var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+              Arr.forEach.call(tables, function(table) {
+                Arr.forEach.call(table.tBodies, function(tbody) {
+                  Arr.forEach.call(tbody.rows, _filter);
+                });
+              });
+            }
+            // 資料篩選函數，顯示包含關鍵字的列，其餘隱藏
+            function _filter(row) {
+              var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+              row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+            }
+            return {
+              // 初始化函數
+              init: function() {
+                    var inputs = document.getElementsByClassName('search_input');
+                    Arr.forEach.call(inputs, function(input) {
+                      input.oninput = _onInputEvent;
+                    });
+                  }
+                };
+            })(Array.prototype);
+
+          // 網頁載入完成後，啟動 LightTableFilter
+          document.addEventListener('readystatechange', function() {
+            if (document.readyState === 'complete') {
+              LightTableFilter.init();
+                }
+              });
+            })(document);
+        </script>
+    </head>
+    <body>
+        <div id="all">
+            <div id=a>
+            <div id="header1">
+                <div id="head1">Yourtwo</div>
+            </div>
+            <div id="wrapper0">
+                <div id="left0">《</div>
+                <div id="right0">》</div>
+                <div id="header2">
+                    <marquee align="midden" direction="right" scrollamount="14" behavior="scroll">
+                        ~~~~~~~~~~~~~~~~~~~12月31日也很棒 是吧 老師^_^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        12月30日是很棒的日子~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                        ✿✿✿我們做的很棒吧吧吧~評高一點嘛✿✿✿~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+                        (⊃｡•́‿•̀｡)⊃━━━━☆｡･:*:･ﾟ'★,｡･:*:･ﾟ'☆霹靂卡 霹靂拉拉　波波力那 貝貝魯多~~~~~~~~~
+                    </marquee>
+                </div>
+            </div>
+            <div id="header">
+                <div id="gohome">
+                    <a href="index.html" style="text-decoration: none;">回到首頁</a>
+                </div>
+                <div1>
+                <ul class="menu">
+                       <li><a2 href="#">公益</a2>
+                        <ul>
+                            <li><a href="#"><div id="a">愛心大愛</div></a>
+                                <ul>
+                                    <li><a href="https://www.children.org.tw/join/celebrity_detail/CBR000029"target="_blank"><div id="b">侯佩岑</div></a></li>
+                                    <li><a href="https://www.children.org.tw/join/celebrity_detail/CBR000023"target="_blank"><div id="b">郭采潔</div></a></li>
+                                    <li><a href="https://www.children.org.tw/join/celebrity_detail/1556"target="_blank"><div id="c">陳建州</div></a></li>
+                                    <li><a href="https://www.children.org.tw/join/celebrity_detail/1560"target="_blank"><div id="c">張書豪</div></a></li>
+                                    <li><a href="https://www.children.org.tw/join/celebrity_detail/1558"target="_blank"><div id="c">夏于喬</div></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><div id="a">幫助偏鄉</div></a>
+                                <ul>
+                                    <li><a href="https://www.thenewslens.com/feature/mitsubishi-motors-young-2017/86367"target="_blank"><div id="d">黃正發校長</div></a></li>
+                                    <li><a href="https://udn.com/news/story/6845/3983470"target="_blank"><div id="d">劉安婷</div></a></li>
+                                    <li><a href="https://www.storm.mg/lifestyle/340959"target="_blank"><div id="d">陳俊朗</div></a></li>
+                                    <li><a href="https://udn.com/news/story/7266/3205264"target="_blank"><div id="d">許素娟</div></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><div id="a">國際援助</div></a>
+                                <ul>
+                                    <li><a href="http://www.taiwanroot.org/"target="_blank"><div id="e">台灣路竹會</div></a></li>
+                                    <li><a href="https://www.taiwaniha.org.tw/"target="_blank"><div id="e">TaiwanIHA</div></a></li>
+                                    <li><a href="http://www.action2world.org/"target="_blank"><div id="e">iACT</div></a></li>
+                                    <li><a href="https://m.worldvision.org.tw/"target="_blank"><div id="e">世界展望會</div></a></li>
+                                </ul>
+                            </li>
+                        </ul>   
+                    </li>
+                    <li><a2 href="#">爭議</a2>
+                        <ul>
+                            <li><a href="#"><div id=a>奇美部落</div></a>
+                                <ul>
+                                    <li><a href="奇美部落-內容簡介.html"target="_blank"><div id="f">內容簡介</div></a></li>
+                                    <li><a href="奇美部落-談判現場.html"><div id="f">談判現場</div></a></li>
+                                    <li><a href="奇美部落-後續發展.html"target="_blank"><div id="f">後續發展</div></a></li>
+                                    <li><a href="奇美部落-資料來源.html"target="_blank"><div id="f">資料來源</div></a></li>
+                                    <li><a href="奇美部落-心得感想.html"target="_blank"><div id="f">心得感想</div></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><div id=a>知本濕地</div></a>
+                                <ul>
+                                    <li><a href="知本濕地-內容簡介.html"target="_blank"><div id="g">內容簡介</div></a></li>
+                                    <li><a href="知本濕地-談判現場.html"target="_blank"><div id="g">談判現場</div></a></li>
+                                    <li><a href="知本濕地-後續發展.html"target="_blank"><div id="g">後續發展</div></a></li>
+                                    <li><a href="知本濕地-資料來源.html"target="_blank"><div id="g">資料來源</div></a></li>
+                                    <li><a href="知本濕地-心得感想.html"target="_blank"><div id="g">心得感想</div></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><div id=a>都蘭部落</div></a>
+                                <ul>
+                                    <li><a href="都蘭部落-內容簡介.html"target="_blank"><div id="h">內容簡介</div></a></li>
+                                    <li><a href="都蘭部落-談判現場.html"target="_blank"><div id="h">談判現場</div></a></li>
+                                    <li><a href="都蘭部落-後續發展.html"target="_blank"><div id="h">後續發展</div></a></li>
+                                    <li><a href="都蘭部落-資料來源.html"target="_blank"><div id="h">資料來源</div></a></li>
+                                    <li><a href="都蘭部落-心得感想.html"target="_blank"><div id="h">心得感想</div></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><div><div id="j"><a2 href="#">電腦</a2></div></div>
+                        <ul>
+                            <li><a href="#"><div id="j">主機板</div></a>
+                                <ul>
+                                    <li><a href="https://www.asus.com/tw/Motherboards/"target="_blank"><div id="k">華碩</div></a>
+                                        <ul>
+                                            <li><a href="https://www.asus.com/tw/Motherboards/ASUS-Prime-Products/"target="_blank"><div id="k">Prime</div></a>
+                                            <li><a href="https://www.asus.com/tw/Motherboards/TUF-The-Ultimate-Force-Products/"target="_blank"><div id="k">TUF</div></a>
+                                            <li><a href="https://www.asus.com/tw/Motherboards/TUF-Gaming-Products/"target="_blank"><div id="k">TUF GAMING</div></a>
+                                            <li><a href="https://www.asus.com/tw/Motherboards/TUF-The-Ultimate-Force-Products/"target="_blank"><div id="k">ROG</div></a>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://tw.msi.com/Motherboards"target="_blank"><div id="m">微星</div></a>
+                                        <ul>
+                                            <li><a href="https://tw.msi.com/Motherboard/B450M-MORTAR-MAX"target="_blank"target="_blank"><div id="m">B450</div></a>
+                                            <li><a href="https://tw.msi.com/Motherboard/X370-GAMING-PLUS"target="_blank"><div id="m">X370</div></a >
+                                            <li><a href="https://tw.msi.com/Motherboard/X470-GAMING-PLUS"target="_blank"><div id="m">X470</div></a>
+                                            <li><a href="https://tw.msi.com/Motherboard/MPG-X570-GAMING-PLUS"target="_blank"><div id="m">X570</div></a>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://www.gigabyte.com/tw/Motherboard"target="_blank"><div id="m">技嘉</div></a>
+                                        <ul>
+                                            <li><a href="https://www.gigabyte.com/tw/Motherboard/AORUS-Gaming"target="_blank"><div id="m">AROUS</div></a>
+                                            <li><a href="https://www.gigabyte.com/tw/Motherboard/GIGABYTE-Gaming"target="_blank"><div id="m">GAMING</div></a >
+                                            <li><a href="https://www.gigabyte.com/tw/Motherboard/Ultra-Durable%E2%84%A2"target="_blank"><div id="m">UD</div></a>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><div><div id="j">顯示卡</div></div></a>
+                                <ul>
+                                    <li><a href="https://www.asus.com/tw/Graphics-Cards/"target="_blank"><div id="l">華碩</div></a>
+                                        <ul>
+                                            <li><a href="https://www.asus.com/tw/Graphics-Cards/ROG-Republic-of-Gamers-Products/"target="_blank"><div id="l">ROG</div></a>
+                                            <li><a href="#https://www.asus.com/tw/Graphics-Cards/Turbo-Series-Products/"target="_blank"><div id="l">Turbo</div></a>
+                                            <li><a href="https://www.asus.com/tw/Graphics-Cards/Dual-Series-Products/"target="_blank"><div id="l">Dual</div></a>
+                                            <li><a href="https://www.asus.com/tw/Graphics-Cards/TUF-Gaming-Series-Products/"target="_blank"><div id="l">TUF</div></a>
+                                            <li><a href="https://www.asus.com/tw/Graphics-Cards/Phoenix-Series-Products/"target="_blank"><div id="l">Phoenix</div></a>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://tw.msi.com/Graphics-Cards"target="_blank"><div id="o">微星</div></a>
+                                        <ul>
+                                            <li><a href="https://tw.msi.com/Graphics-card/Radeon-RX-5700-XT-8G"target="_blank"><div id="o">RX 5700XT</div></a>
+                                            <li><a href="https://tw.msi.com/Graphics-card/Radeon-RX-5700-8G"target="_blank"><div id="o">RX 5700</div></a>
+                                            <li><a href="https://tw.msi.com/Graphics-card/Radeon-RX-5500-XT-GAMING-8G"target="_blank"><div id="o">RX 5500XT</div></a>
+                                            <li><a href="https://tw.msi.com/Graphics-card/Radeon-RX-Vega-64-8G"target="_blank"><div id="o">RX Vega64</div></a>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://www.gigabyte.com/tw/Graphics-Card" target="_blank"><div id="n">技嘉</div></a>
+                                        <ul>
+                                            <li><a href="https://www.gigabyte.com/tw/Graphics-Card/GV-R57XTAORUS-8GD#kf"target="_blank"><div id="n">RX 5700XT</div></a>
+                                            <li><a href="https://www.gigabyte.com/tw/Graphics-Card/GV-R57-8GD-B#kf"target="_blank"><div id="n">RX 5700</div></a>
+                                            <li><a href="https://www.gigabyte.com/tw/Graphics-Card/GV-R55XTGAMING-OC-8GD#kf"target="_blank"><div id="n">RX 5500XT</div></a>
+                                            <li><a href="https://www.gigabyte.com/tw/Graphics-Card/GV-RXVEGA64-8GD-B#kf"target="_blank"><div id="n">RX Vega64</div></a>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="https://www.amd.com/zh-hant/products/processors-desktop"target="_blank"><div><div id="j">處理器</div></div></a>
+                                <ul>
+                                    <li><a href="https://www.amd.com/zh-hant/products/cpu/amd-ryzen-5-3500x"target="_blank"><div id="p">R5 3500X</div></a></li>
+                                    <li><a href="https://www.amd.com/zh-hant/products/cpu/amd-ryzen-5-3600"target="_blank"><div id="p">R5 3600</div></a></li>
+                                    <li><a href="https://www.amd.com/zh-hant/products/cpu/amd-ryzen-5-3600x"target="_blank"><div id="p">R5 3600X</div></a></li>
+                                    <li><a href="https://www.amd.com/zh-hant/products/cpu/amd-ryzen-7-3700x"target="_blank"><div id="p">R7 3700X</div></a></li>
+                                    <li><a href="https://www.amd.com/zh-hant/products/cpu/amd-ryzen-9-3950x"target="_blank"><div id="p">R9 3950X</div></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><div><div id="i"><a2 href="#">筆電</a2></div></div>
+                        <ul>
+                            <li><a href="https://www.acer.com/ac/zh/TW/content/group/laptops" target="_blank"><div><div id="i">宏碁</div></div></a>
+                                <ul>
+                                    <li><a href="https://www.acer.com/ac/zh/TW/content/series/swift3" target="_blank"><div><div id="i">Swift 3</div></div></a></li>
+                                    <li><a href="https://www.acer.com/ac/zh/TW/content/series/swift5" target="_blank"><div><div id="i">Swift 5</div></div></a></li>
+                                    <li><a href="https://www.acer.com/ac/zh/TW/content/series/aspire5" target="_blank"><div><div id="i">Aspire 5</div></div></a></li>
+                                    <li><a href="https://www.acer.com/ac/zh/TW/content/series/aspire7" target="_blank"><div><div id="i">Aspire 7</div></div></a></li>
+                                    <li><a href="https://www.acer.com/ac/zh/TW/content/series/nitro5" target="_blank"><div><div id="i">NITRO 5</div></div></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://www.asus.com/tw/Laptops/"target="_blank"><div><div id="i">華碩</div></div></a>
+                                <ul>
+                                    <li><a href="https://www.asus.com/tw/Laptops/ZenBook-Series-Home/" target="_blank"><div><div id="i">ZenBook</div></div></a></li>
+                                    <li><a href="https://www.asus.com/tw/Laptops/VivoBook-Series-Home/"target="_blank"><div><div id="i">VivoBook</div></div></a></li>
+                                    <li><a href="https://www.asus.com/tw/Laptops/ASUS-Laptop-Series-Products/"target="_blank"><div><div id="i">Laptop</div></div></a></li>
+                                    <li><a href="https://www.asus.com/tw/Laptops/Gaming-Series-Products/"target="_blank"><div><div id="i">ROG Gaming</div></div></a></li>
+                                    <li><a href="https://www.asus.com/tw/Laptops/ASUS-TUF-Gaming-Series-Products/"target="_blank"><div><div id="i">TUF Gaming</div></div></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://tw.msi.com/Laptops"target="_blank"><div><div id="i">微星</div></div></a>
+                                <ul>
+                                    <li><a href="https://tw.msi.com/Laptop/Products#?tag=GP-%E7%B3%BB%E5%88%97"target="_blank"><div><div id="i">GP</div></div></a></li>
+                                    <li><a href="https://tw.msi.com/Laptop/Products#?tag=GE-%E7%B3%BB%E5%88%97"target="_blank"><div><div id="i">GE</div></div></a></li>
+                                    <li><a href="https://tw.msi.com/Laptop/Products#?tag=GS-%E7%B3%BB%E5%88%97"target="_blank"><div><div id="i">GS</div></div></a></li>
+                                    <li><a href="https://tw.msi.com/Laptop/Products#?tag=GT-%E7%B3%BB%E5%88%97"target="_blank"><div><div id="i">GT</div></div></a></li>
+                                    <li><a href="https://tw.msi.com/Laptop/Products#?tag=Alpha-%E7%B3%BB%E5%88%97"target="_blank"><div><div id="i">Alpha</div></div></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>        
+                </ul>
+                </div1>
+                
+           <form class="site_search">
+                        <input   type="search" class="search_input"  data-table="order-table" placeholder="搜尋文章">
+                    </form>
+                     <div id="a5">
+                        <table class="order-table">
+                          <tbody>
+     <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                              <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>                              
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                              <td><a href="奇美部落-內容簡介.html"target="_blank"style="text-decoration: none;"><div id=a>奇美部落-內容簡介</div></a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="奇美部落-談判現場.html"target="_blank"style="text-decoration: none;"><div id=a>奇美部落-談判現場</div></a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="奇美部落-後續發展.html"target="_blank"style="text-decoration: none;"><div id=a>奇美部落-後續發展</div></a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="奇美部落-資料來源.html"target="_blank"style="text-decoration: none;"><div id=a>奇美部落-資料來源</div></a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="奇美部落-心得感想.html"target="_blank"style="text-decoration: none;"><div id=a>奇美部落-心得感想</div></a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="知本濕地-內容簡介.html"target="_blank"style="text-decoration: none;"><div id=a>知本濕地-內容簡介</div></a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="知本濕地-談判現場.html"target="_blank"style="text-decoration: none;"><div id=a>知本濕地-談判現場</div></a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="知本濕地-後續發展.html"target="_blank"style="text-decoration: none;"><div id=a>知本濕地-後續發展</div></a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="知本濕地-資料來源.html"target="_blank"style="text-decoration: none;"><div id=a>知本濕地-資料來源</div></a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="知本濕地-心得感想.html"target="_blank"style="text-decoration: none;"><div id=a>知本濕地-心得感想</div></a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="都蘭部落-內容簡介.html"target="_blank"style="text-decoration: none;"><div id=a>都蘭部落-內容簡介</div></a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="都蘭部落-談判現場.html"target="_blank"style="text-decoration: none;"><div id=a>都蘭部落-談判現場</div></a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="都蘭部落-後續發展.html"target="_blank"style="text-decoration: none;"><div id=a>都蘭部落-後續發展</div></a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="都蘭部落-資料來源.html"target="_blank"style="text-decoration: none;"><div id=a>都蘭部落-資料來源</div></a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="都蘭部落-心得感想.html"target="_blank"style="text-decoration: none;"><div id=a>都蘭部落-心得感想</div></a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        </div>
+            </div>
+            <div id="wrapper">
+                <div id="left">
+                    <div class="month">      
+                      <ul>
+                        <li class="prev"> < </li>
+                        <li class="next"> > </li>
+                        <li style="text-align:center">
+                          DECEMBER<br>
+                          <span style="font-size:18px">2019</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <ul class="weekdays">
+                      <li>一&emsp;二&emsp;三&emsp;四&emsp;五&emsp;六&emsp;日</li>
+                    </ul>
+
+                    <ul class="days">  
+                      <li>1&emsp;&nbsp;&nbsp;&nbsp;2&ensp;&nbsp;&nbsp;&nbsp;&nbsp;3&emsp;&nbsp;&nbsp;&nbsp;4&emsp;&nbsp;&nbsp;&nbsp;5&emsp;&emsp;&nbsp;6&emsp;&nbsp;&nbsp;&nbsp;7</li>
+                      <li>8&nbsp;&emsp;&nbsp;&nbsp;9&ensp;&ensp;&nbsp;&nbsp;10&ensp;&ensp;&nbsp;11&ensp;&emsp;12&nbsp;&emsp;13&nbsp;&emsp;14</li>
+                      <li>15&nbsp;&emsp;16&nbsp;&emsp;17&nbsp;&emsp;18&nbsp;&emsp;19&ensp;&emsp;20&ensp;&ensp;&nbsp;21</li>
+                      <li>22&nbsp;&emsp;23&nbsp;&nbsp;&nbsp;<span class="active">24</span>&nbsp;&nbsp;25&nbsp;&emsp;26&ensp;&emsp;27&ensp;&ensp;&nbsp;28</li>
+                      <div id="wordleft">29&nbsp;&emsp;30&nbsp;&nbsp;&nbsp;&nbsp;31</div>
+                    </ul>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/BsvIwqyiaJw?&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id="right">
+                    <div id="music">
+                        <embed src="song3.mp3"  autostart="false"  hidden="true" loop="true" volume="50" width="100%" height="60"> 
+                    </div>s
+                    <div id="a1">
+                        <div id="rmenu"><a href="#top" style="text-decoration: none;" >按我跑到最上面</a><br><a href="留言.html" style="text-decoration: none;" >留言區</a></div>
+                    </div>
+                </div>
+                <div id="main">
+                    <div id="wordfirst1">
+                    <br>
+                    資料來源
+                    </div>
+                    <ul id=word1>
+            		<li><a href="https://e-info.org.tw/node/218310"target="_blank"><font color="blue">資料來源</font></a></li>
+            		<li><a href="https://www.storm.mg/article/1807380"target="_blank"><font color="blue">資料來源</font></a></li>
+                        <li><a href="https://www.thenewslens.com/article/115861"target="_blank"><font color="blue">資料來源</font></a></li>
+                        <li><a href="https://pnn.pts.org.tw/project/inpage/2078"target="_blank"><font color="blue">資料來源</font></a></li>
+                        <li><a href="https://e-info.org.tw/node/217094"target="_blank"><font color="blue">資料來源</font></a></li>
+                        <li><a href="https://news.pts.org.tw/article/433446"target="_blank"><font color="blue">資料來源</font></a></li>
+                    </ul>
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+            <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Falgo.nttu.edu.tw%2F1081ITWWW%2F10811226&width=0&layout=standard&action=like&size=small&share=true&height=35&appId" width="450" height="35" show_faces="true" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>   
+        </div>
+        </div>
+         <div id="a">
+        <div style="text-align:center;font-size:8px;width:150px">
+            <script type="" src="snow.txt"></script>
+        </div>
+        </div>
+    </body>
+</html>
+     
